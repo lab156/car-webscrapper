@@ -1,0 +1,7 @@
+#Para ignorar los archivo temporales
+*~
+*.sw*
+*.pyc
+*.so
+automotive-model-year-data
+
