@@ -1,13 +1,16 @@
 import mysql.connector as sql
 from datetime import date, datetime
 import sc_update_monitor as monitor
+import db_info
+
+DB = db_info.DB_info()
 
 
 class CarDB(object):
     def __init__(self, *args, **kwargs):
-        self.user = kwargs.get('user', 'root')
-        self.password = kwargs.get('password', 'culito')
-        self.database = kwargs.get('database', 'test')
+        self.user = kwargs.get('user', DB.user)
+        self.password = kwargs.get('password', DB.passw)
+        self.database = kwargs.get('database', DB.database)
 
         self.cnx = sql.connect(user=self.user,
                 password=self.password,

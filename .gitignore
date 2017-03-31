@@ -4,4 +4,5 @@
 *.pyc
 *.so
 automotive-model-year-data
+db_info.py
 
