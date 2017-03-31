@@ -1,6 +1,6 @@
 import mysql.connector as sql
 from datetime import date, datetime
-import sc_update_monitor as monitor
+import seleniun_mngmt  as monitor
 import db_info
 
 DB = db_info.DB_info()
@@ -68,20 +68,23 @@ class CarDB(object):
         values_lst = [car_id,  url, datetime.now()]
         str_lst = ['%s']
 
-        is_superclasif = SC.check(url)
-        if is_superclasif.check():
-            names_lst.append('IdWeb')
-            values_lst.append(is_superclasif.url)
 
         precio = kwargs.get('precio', None)
         if precio:
             names_lst.append('precio')
             values_lst.append(precio)
 
+        #IdWeb puede ser especificada como argumento
+        # o leida de la url 
         id_web = kwargs.get('IdWeb', None)
+        names_lst.append('IdWeb')
         if id_web:
-            names_lst.append('IdWeb')
             values_lst.append(id_web)
+        else:
+            is_superclasif = SC(url)
+            if is_superclasif.check():
+                values_lst.append(is_superclasif.id_web)
+
 
         self.open()
         add_car_price = ''' INSERT INTO `CarPriceInfo` ( %s ) VALUES 
@@ -101,9 +104,6 @@ class SC(object):
         '''
         checks if url is indeed from superclasificados webpage
         '''
-        if 'superclasificados' in self.url:
-            return True
-        else:
-            False
+        return 'superclasificados' in self.url
 
 
