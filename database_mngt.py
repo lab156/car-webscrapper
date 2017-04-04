@@ -93,6 +93,18 @@ class CarDB(object):
         self.cnx.commit()
         self.close()
 
+    def lookup_carId(self, make, model, year):
+        self.open()
+        lookup_sql = '''SELECT id FROM VehicleModelYear WHERE make=( %s ) AND model=( %s ) AND year=( %s );'''
+        lookup_values = (make, model, year)
+        self.cursor.execute(lookup_sql, lookup_values)
+        result_list = [ Id for Id in self.cursor ]
+        self.close()
+        if result_list:
+            return result_list[0][0]
+        else:
+            return None
+
 class SC(object):
     def __init__(self, url, **kwargs):
         self.url = url
