@@ -29,6 +29,17 @@ def model(modelo):
     '''
     return modelo.title()
 
+def id_web(id_text):
+    '''
+    >>> id_web('ID WEB: 175466')
+    '175466'
+    '''
+    resu = re.findall( r'ID WEB: (\d+)', id_text)
+    if len(resu) > 0:
+        return resu[0]
+    else:
+        raise ValueError('No hay resultados en la IdWeb')
+
 def condicion(cond):
     '''
     >>> condicion('Usado')
@@ -109,10 +120,13 @@ def transmision(trans):
     >>> transmision('hola')
     
     '''
-    opciones = ['auto', 'mecan']
+    opciones_meca = ['mecanico', 'mecan', 'mecánico']
+    opciones_auto = ['automatica', 'auto', 'automática']
 
-    if trans.lower() in opciones:
-        return trans.lower()
+    if trans.lower() in opciones_meca:
+        return 'mecan'
+    elif trans.lower() in opciones_auto:
+        return 'auto'
     else:
         return None
 
@@ -166,6 +180,7 @@ def tipo(t):
         return 'SUV'
     else:
         return None
+
 
 if __name__ == "__main__":
     import doctest

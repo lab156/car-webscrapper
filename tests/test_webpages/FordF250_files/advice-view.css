@@ -1,0 +1,678 @@
+.ampliacion-aviso {
+    width: 100%;
+    float: left;
+    margin: 0 0 10px;
+}
+
+/* --- Header --- */
+.ampliacion-aviso header {
+    width: 100%;
+    border-bottom: 2px dotted #b9b9b9;
+    float: left;
+    margin: 0 0 14px;
+    position: relative;;
+    padding: 0 0 10px;
+}
+
+.ampliacion-aviso header h2 {
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 21px;
+    color: #464850;
+    padding: 0 0 4px;
+    margin: 0;
+}
+
+.ampliacion-aviso header .price {
+    font-weight: bold;
+    color: #f19321;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.share-buttons {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    float: right;
+}
+
+.share-buttons a {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    background: url(/images/frontend/autos/icons-share.jpg) 0 0 no-repeat;
+    height: 27px;
+    text-indent: -10000px;
+}
+
+.inmuebles .share-buttons a {
+    background: url(/images/frontend/inmuebles/icons-share.jpg) 0 0 no-repeat;
+}
+
+.varios .share-buttons a {
+    background: url(/images/frontend/varios/icons-share.jpg) 0 0 no-repeat;
+}
+
+.empleos .share-buttons a {
+    background: url(/images/frontend/empleos/icons-share.jpg) 0 0 no-repeat;
+}
+
+.share-buttons a.denunciate {
+    background-position: 0 0;
+    width: 30px;
+}
+
+.share-buttons a.denunciate:hover {
+    background-position: 0 -27px;
+}
+
+.share-buttons a.favorite {
+    background-position: -30px 0;
+    width: 28px;
+}
+
+.share-buttons a.favorite:hover {
+    background-position: -30px -27px;
+}
+
+.share-buttons a.email {
+    background-position: -58px 0;
+    width: 31px;
+}
+
+.share-buttons a.email:hover {
+    background-position: -58px -27px;
+}
+
+.share-buttons a.print {
+    background-position: -89px 0;
+    width: 33px;
+}
+
+.share-buttons a.print:hover {
+    background-position: -89px -27px;
+}
+
+.share-buttons a.facebook {
+    background-position: -122px 0;
+    width: 25px;
+}
+
+.share-buttons a.facebook:hover {
+    background-position: -122px -27px;
+}
+
+.share-buttons a.twitter {
+    background-position: -147px 0;
+    width: 27px;
+}
+
+.share-buttons a.twitter:hover {
+    background-position: -147px -27px;
+}
+
+/* --- Tabs --- */
+.tabs-section {
+    float: left;
+    width: 100%;
+    position: relative;
+    margin: 0 0 20px;
+}
+
+.tabs-section .txt {
+    padding: 20px;
+    height: 393px;
+    background: #F3F3F3;
+}
+
+.tabs-section .fecha {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    float: right;
+    text-align: right;
+    line-height: 25px;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #FFF;
+}
+
+.nav-tabs > li > a {
+    border: none;
+    border-radius: 0;
+    line-height: 25px;
+    margin-right: 1px;
+    padding: 0 6px 0 30px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #e2e3e8;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus, .nav-tabs > li > a:hover {
+    border-radius: 0;
+    background-color: #f19321;
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.nav-tabs > li > a.icon1 {
+    background-image: url(/images/frontend/icon-photo.png);
+}
+
+.nav-tabs > li > a.icon1:hover, .nav-tabs > li.active > a.icon1 {
+    background-image: url(/images/frontend/icon-photo-o.png);
+}
+
+.nav-tabs > li > a.icon2 {
+    background-image: url(/images/frontend/icon-video.png);
+}
+
+.nav-tabs > li > a.icon2:hover, .nav-tabs > li.active > a.icon2 {
+    background-image: url(/images/frontend/icon-video-o.png);
+}
+
+.nav-tabs > li > a.icon3 {
+    background-image: url(/images/frontend/icon-map.png);
+}
+
+.nav-tabs > li > a.icon3:hover, .nav-tabs > li.active > a.icon3 {
+    background-image: url(/images/frontend/icon-map-o.png);
+}
+
+/* --- Gallery --- */
+
+#photo {
+    width: 100%;
+    float: left;
+    background: #f2f2f2;
+}
+
+#photo .preview-container #big-preview {
+    width: 620px;
+    float: left;
+}
+
+#photo .thumbs {
+    width: 128px;
+    float: left;
+}
+
+#photo .thumbs .btn-up, .btn-down {
+    display: block;
+    float: left;
+    background: #797b82 url(/images/frontend/icon-up.png) center 0 no-repeat;
+    width: 100%;
+    height: 16px;
+    text-indent: -10000px;
+}
+
+#photo .thumbs .btn-down {
+    background-image: url(/images/frontend/icon-down.png);
+}
+
+#photo .thumbs .btn-up:hover, #photo .thumbs .btn-down:hover {
+    background-color: #c60018;
+}
+
+#photo .thumbs-mask {
+    width: 121px;
+    height: 419px;
+    overflow: hidden;
+}
+
+#photo .thumbs ul {
+    list-style: none;
+    float: left;
+    width: 115px;
+    margin: 0 0 0 6px;
+    padding: 0;
+}
+
+#photo .thumbs ul li {
+    padding: 5px 0;
+    margin: 0;
+    border-bottom: 1px solid #797b82;
+}
+
+#photo .thumbs ul li img {
+    border: 1px solid #797b82;
+}
+
+#photo .thumbs ul li.active img, #photo .thumbs ul li:hover img {
+    border: 1px solid #f19321;
+}
+
+/* --- Video --- */
+#video #video-preview {
+    float: left;
+    width: 750px;
+    height: 400px;
+    max-width: 100%;
+}
+
+/* --- Características --- */
+.ampliacion-aviso .box {
+    width: 100%;
+    float: left;
+    padding: 0 0 25px;
+}
+
+.ampliacion-aviso .box ul {
+    display: block;
+    width: 100%;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ampliacion-aviso .box ul li {
+    display: block;
+    width: 42%;
+    float: left;
+    margin: 0 25px 0 0;
+    padding: 0 0 0 10px;
+    line-height: 27px;
+    background: url(/images/frontend/autos/icon-square.png) left center no-repeat;
+    font-weight: bold;
+    color: #464850;
+    border-top: 1px solid #d8d9e0;
+    font-size: 14px;
+}
+
+.ampliacion-aviso .box ul li:first-child, .ampliacion-aviso .box ul li:nth-child(2) {
+    border-top: none;
+}
+
+.ampliacion-aviso .box ul li span {
+    display: inline-block;
+    width: 49%;
+    line-height: 27px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/*.special-title {
+    width: 100%;
+    float: left;
+    border-top: 1px solid #f19321;
+    margin: 0 0 6px;
+}
+
+.special-title span {
+    display: inline-block;
+    padding: 0 10px 1px;
+    background: #f19321;
+    line-height: 32px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 20px;
+}*/
+
+.ampliacion-aviso p {
+    padding: 0 0 0 10px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.avisos-similares {
+    width: 100%;
+    float: left;
+    margin: 8px 0 25px;
+}
+
+.avisos-similares #c-predios {
+    width: 100%;
+    float: left;
+    padding: 10px 0 0 0;
+}
+
+.avisos-similares #c-predios .item {
+    float: left;
+    width: 145px;
+}
+
+.ads.text-center img {
+    float: none;
+}
+
+/* ----------------------- Seller Contact ----------------------- */
+.contacto-vendedor{
+    float: left;
+    width: 100%;
+    padding: 0 0 20px;
+}
+
+.contacto-vendedor .info-vendedor {
+    float: left;
+    width: 100%;
+    padding: 0 0 14px;
+}
+
+.contacto-vendedor .info-vendedor header {
+    float: left;
+    width: 100%;
+    padding: 0 0 12px;
+    margin: 0 0 17px;
+    border-bottom: 1px solid #dddee2;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 19px;
+    color: #333;
+}
+
+.contacto-vendedor .info-vendedor header img {
+    float: right;
+}
+
+.contacto-vendedor .info-vendedor header strong {
+    display: block;
+    margin: 22px 0 4px;
+    font-size: 16px;
+    color: #f19321
+}
+
+.contacto-vendedor .info-vendedor span {
+    display: block;
+}
+
+.contact-form {
+    float: left;
+    color: #e6e8ec;
+    width: 100%;
+    /*padding: 15px 10px;
+    background: #e6e8ec;*/
+}
+
+.contact-form .left {
+    float: left;
+    width: 147px;
+    margin: 12px 0 0;
+}
+
+.contact-form .right {
+    float: right;
+    width: 119px;
+    margin: 12px 0 0;
+}
+
+.contact-form .fila {
+    float: left;
+    width: 100%;
+    padding: 0 0 5px;
+}
+
+.contact-form label { 
+    display: block;
+    color: black;
+}
+
+.contact-form em {
+    display: block;
+    color: #5f616b;
+    font-size: 11px;
+    line-height: 13px;
+    margin: 0 0 7px 2px;
+}
+
+.contact-form img {
+    float: left;
+    width: 113px;
+    height: 52px;
+    margin: 5px 0 5px 0;
+}
+
+.contact-form .change-captcha {
+    border: none;
+    padding: 0px;
+    width: 17px;
+    height: 20px;
+    float: left;
+    margin: 21px 10px 21px 7px;
+    padding: 0;
+    cursor: pointer;
+    background: transparent url(/images/frontend/captcha-reload.png) no-repeat;
+    transition: all 0.6s ease 0s;
+}
+
+.contact-form .change-captcha:hover {
+    opacity: 0.35;
+}
+
+.contact-form .captcha-help {
+    display: block;
+    color: #5f616b;
+    font-size: 11px;
+    line-height: 13px;
+    margin: 0 0 7px 2px;
+    padding: 0;
+    font-style: italic;
+}
+
+.contact-form .input, .contact-form #captcha {
+    float: left;
+    width: 100%;
+    line-height: 28px;
+    height: 30px;
+    border: 1px solid #c6c6c6;
+    padding: 0 8px;
+}
+
+.contact-form textarea {
+    float: left;
+    width: 100%;
+    line-height: 28px;
+    border: 1px solid #c6c6c6;
+    padding: 0 8px;
+    margin: 0 0 10px;
+    height: 70px;
+}
+
+#advice-back-block {
+    float: right;
+    margin-top: -48px;
+}
+
+.advice-back-text {
+    color: #464850;
+    float: left;
+    margin-right: 10px;
+    padding-top: 3px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.advice-back-left {
+    display: block;
+    height: 25px;
+    width: 25px;    
+    background: url("/../images/frontend/arrow-gallery-left.png") no-repeat scroll 8px center #c60018;
+    float: right;
+}
+
+
+/* =============================================================================
+---------- Caracteristicas para cada mercado OPSA  --------------
+=============================================================================== */
+
+/* INMUEBLES */
+.inmuebles .ampliacion-aviso header .price {
+    color: #358940;
+}
+
+.inmuebles #photo .thumbs ul li.active img, .inmuebles #photo .thumbs ul li:hover img {
+    border: 1px solid #358940;
+}
+
+.inmuebles #photo .thumbs .btn-up:hover, .inmuebles #photo .thumbs .btn-down:hover {
+    background-color: #358940;
+}
+
+.inmuebles .contacto-vendedor .info-vendedor header strong {
+    color: #358940
+}
+
+.inmuebles .nav-tabs > li.active > a, .inmuebles .nav-tabs > li.active > a:hover, 
+.inmuebles .nav-tabs > li.active > a:focus, .inmuebles .nav-tabs > li > a:hover {
+    background-color: #358940;
+}
+
+.inmuebles .ampliacion-aviso .box ul li {
+    background: url(/images/frontend/inmuebles/icon-square.png) left center no-repeat;
+}
+
+.inmuebles .advice-back-left {
+    background-color: #358940;
+}
+
+/* VARIOS */
+.varios .ampliacion-aviso header .price {
+    color: #F47621;
+}
+
+.varios #photo .thumbs ul li.active img, 
+.varios #photo .thumbs ul li:hover img {
+    border: 1px solid #F47621;
+}
+
+.varios #photo .thumbs .btn-up:hover, 
+.varios #photo .thumbs .btn-down:hover {
+    background-color: #F47621;
+}
+
+.varios .contacto-vendedor .info-vendedor header strong {
+    color: #F47621
+}
+
+.varios .nav-tabs > li.active > a, 
+.varios .nav-tabs > li.active > a:hover, 
+.varios .nav-tabs > li.active > a:focus, 
+.varios .nav-tabs > li > a:hover {
+    background-color: #F47621;
+}
+
+.varios .ampliacion-aviso .box ul li {
+    background: url(/images/frontend/varios/icon-square.png) left center no-repeat;
+}
+
+.varios .advice-back-left {
+    background-color: #F47621;
+}
+
+
+/* EMPLEOS */
+.empleos #statistics{
+    width: 100%;
+    float:left;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    color:#666;
+    margin-bottom: 20px;
+}  
+.empleos .detalle-aviso .barra-acciones {
+    background-color: #e6e6e6;
+    float: right;
+    /*border: 1px solid #dadada;*/
+}
+.empleos .detalle-aviso .barra-acciones .soc{
+    display: block;
+}
+.empleos .detalle-aviso .barra-acciones a {
+    width: 45px!important;
+    height: 40px!important;
+}
+
+.empleos .detalle-aviso .social .facebook{
+    line-height: 40px !important;
+}
+.empleos .detalle-aviso .social .twitter{
+    line-height: 40px !important;
+}
+
+.empleos .detalle-aviso .barra-acciones .alerta.activo, 
+.empleos .detalle-aviso .barra-acciones a:hover {
+    background-color: #428bca!important;
+}
+.empleos .id-web{
+    border: 1px solid #dadada;
+    padding: 10px;
+    height: 40px;
+    background-color: #eee;
+}
+.empleos .id-web span{
+    color: #428bca!important;
+    margin-left: 3px;
+}
+.empleos #advice-details{
+    width: 100%;
+    margin-top: 30px;
+}
+#postulate{
+    width: 100%;
+    margin-top: 25px;
+    float:left
+}
+.empleos .group-info{
+    padding: 0 15px 15px;
+    background-color: #eee;
+    float: left;
+    width: 100%;
+}
+.title-empleo{
+    color: #474751;
+    font-size: 17px;
+    font-family: Roboto,Arial,sans-serif;
+    margin: 0 0 15px;
+    font-weight: 700;
+}
+.empleos .group-info .box{
+    padding: 10px 10px 0;
+    margin-bottom: 25px;
+    float: left;
+}
+.empleos .group-info .box .special-title{
+    border: none;
+    margin: 0;
+    padding:0;
+}
+.empleos .group-info .box .special-title span{
+    display: inline-block;
+    color: #a0a1a5;
+    font-size: 19px;
+    text-indent: 10px;
+    background: none;
+    letter-spacing: 1px;
+    line-height: normal;
+    padding: 0 0 5px;
+}
+
+.empleos .group-info .box ul{
+    background: #fff;
+    padding: 20px;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+.empleos .group-info .box ul li{
+    list-style: none;
+}
+.empleos .group-info .box ul li span{
+    font-weight: bold;
+    padding-right: 6px;
+    color: #428bca;
+}
+.empleos .detalle-aviso .caracteristicas h4{
+    color: #428bca;
+}
+
+.empleos .advice-back-left {
+    background-color: #248bca;
+}

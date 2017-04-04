@@ -1,0 +1,537 @@
+header .navbar {
+    margin-bottom: 0
+}
+
+header .navbar-superior {
+    background-color: #c60018
+}
+
+header .navbar-superior.destacado-empleos {
+    background: #278fce;
+}
+
+header .navbar-superior.destacado-inmuebles {
+    background: #358940;
+}
+
+header .navbar-superior.destacado-varios {
+    background: #F47621;
+}
+
+header .navbar-superior li a,header .navbar-superior li p {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    /*line-height: 40px*/
+    line-height: 37px
+}
+
+/*header .navbar-superior .navbar {
+    height: 40px;
+    min-height: 40px
+}
+@media screen and (max-width:768px){
+    header .navbar-superior .navbar {
+    height: 80px;
+    min-height: 80px;
+    }
+}*/
+
+header .navbar-superior .navbar .logos {
+    padding-top: 5px
+}
+
+header .navbar-superior .navbar .logos li {
+    height: 30px;
+    display: table-cell;
+    vertical-align: bottom;
+    float: initial;
+    padding-right: 20px
+}
+
+header .navbar-superior .navbar-nav li a.navbar-link {
+    padding: 0 5px
+}
+
+header .navbar-superior .navbar-nav li a.navbar-link:before {
+    content: "|";
+    padding-right: 5px
+}
+
+header .navbar-superior .navbar-nav li a.navbar-link:focus,header .navbar-superior .navbar-nav li a.navbar-link:hover {
+    background-color: transparent;
+    text-decoration: underline
+}
+
+header .navbar-superior .navbar-nav li a.cerrar-sesion {
+    color: #ffa3ae
+}
+
+header .navbar-superior .navbar-text {
+    margin: 0 5px
+}
+
+header .navbar-superior .soc li.social {
+    margin-top: 5px
+}
+
+header .navbar-superior .soc li.social :first-child {
+    margin-left: 30px
+}
+
+header .contenido-cabecera {
+    height: 195px;
+    padding-top: 20px;
+    background-color: #fff;
+}
+
+header .contenido-cabecera button {
+    padding: 0;
+    border: 0
+}
+
+header .contenido-cabecera p {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 0
+}
+
+header .contenido-cabecera .destacado-a {
+    width: 300px;
+    height: 60px;
+    background: #c60018;
+    position: relative;
+    border-radius: 0;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-top: 10px
+}
+
+header .contenido-cabecera .destacado-a.destacado-empleos {
+    background: #278fce;
+}
+
+header .contenido-cabecera .destacado-a.destacado-inmuebles {
+    background: #358940;
+}
+
+header .contenido-cabecera .destacado-a.destacado-varios {
+    background: #F47621;
+}
+
+header .contenido-cabecera .destacado-a a:hover{
+    text-decoration: none;
+}
+
+header .contenido-cabecera .destacado-a:before {
+    border-bottom: 30px solid transparent;
+    border-left: 15px solid #c60018;
+    border-top: 30px solid transparent;
+    content: '';
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 0
+}
+
+header .contenido-cabecera .destacado-a p.destacado {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -.01em;
+    text-shadow: 0 1px 2px #9f310c
+}
+
+header .contenido-cabecera .destacado-a p.destacado .destacado-color {
+    color: #fffd6a
+}
+
+header .contenido-cabecera .destacado-a span.destacado-color {
+    color: #fffd6a
+}
+
+
+header .contenido-cabecera .destacado-b {
+    width: 300px;
+    height: 60px;
+    background: #c60018;
+    position: relative;
+    border-radius: 0
+}
+
+header .contenido-cabecera .destacado-b.destacado-empleos {
+    background: #278fce;
+}
+
+header .contenido-cabecera .destacado-b.destacado-inmuebles {
+    background: #358940;
+}
+
+header .contenido-cabecera .destacado-b.destacado-varios {
+    background: #F47621;
+}
+
+header .contenido-cabecera .destacado-b:before {
+    border-bottom: 30px solid transparent;
+    border-left: 15px solid #c60018;
+    border-top: 30px solid transparent;
+    content: '';
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 0
+}
+
+header .contenido-cabecera .destacado-inmuebles:before {
+    border-bottom: 30px solid transparent;
+    border-left: 15px solid #358940;
+    border-top: 30px solid transparent;
+    content: '';
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 0
+}
+
+header .contenido-cabecera .destacado-empleos:before {
+    border-bottom: 30px solid transparent;
+    border-left: 15px solid #278fce;
+    border-top: 30px solid transparent;
+    content: '';
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 0
+}
+
+header .contenido-cabecera .destacado-varios:before {
+    border-bottom: 30px solid transparent;
+    border-left: 15px solid #F47621;
+    border-top: 30px solid transparent;
+    content: '';
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 0
+}
+
+header .contenido-cabecera .destacado-b .detalle-destacado-b {
+    width: 95px;
+    height: 60px;
+    position: relative;
+    border-radius: 0;
+    float: left;
+    background: url(/../images/frontend/auriculares.png) center center no-repeat #303030
+}
+
+header .contenido-cabecera .destacado-b .detalle-destacado-b:before {
+    border-bottom: 30px solid transparent;
+    border-left: 15px solid #303030;
+    border-top: 30px solid transparent;
+    content: '';
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 0
+}
+
+header .contenido-cabecera .destacado-b p {
+    line-height: 60px;
+    font-weight: 500;
+    margin-left: 20px;
+    display: inline-block
+}
+
+header .navbar-inferior {
+    background-color: #e8e8e8
+}
+
+header .navbar-inferior .navbar-nav li a {
+    color: #494949;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    z-index: 1
+}
+
+@media ( min-width :768px) and (max-width:991px) {
+    header .navbar-superior li a,header .navbar-superior li p {
+        font-size: 12px
+    }
+    header .navbar-superior .soc li.social :first-child {
+        margin-left: 0
+    }
+    header .navbar-superior .navbar-nav li a.navbar-link {
+        padding: 0 3px
+    }
+    header .navbar-superior .navbar-nav li a.navbar-link:before {
+        padding-right: 3px 
+    }
+}
+
+.selector-portal .selector {
+    /*background: url(/../images/frontend/trama.png) #000;*/
+    /*height: 50px*/height: 55px;
+}
+
+.selector-portal .selector a {
+    /*width: 191px;*/width: 140px;
+    /*height: 54px;*/height: 55px;
+    display: inline-block;
+    /*margin-top: -4px;*/
+    float: left;
+    position: relative;
+    z-index: 10;
+    color: #333;
+    font-family: "montserratBold",Arial,helvetica;
+    font-size: 16px;
+    text-decoration: none;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    text-align: center;
+    font-weight: 700;
+    line-height: 55px;
+}
+.logo-space {
+    margin-right: 50px;
+}
+
+.selector-portal .selector a.autos {
+    color: #333;
+   /* background: url(/../images/frontend/btn-sa-gris.png) center center no-repeat*/
+}
+
+.selector-portal .selector a.autos.activo {
+    color: #c60018;
+    /*background: url(/../images/frontend/btn-sa-color.png) center center no-repeat*/
+}
+.selector-portal .selector a.autos:hover {
+    background-color: #c60018;
+    color: #ffffff;
+}
+
+.selector-portal .selector a.casas {
+    color: #333;
+    /*background: url(/../images/frontend/btn-sc-gris.png) center center no-repeat*/
+}
+
+.selector-portal .selector a.casas.activo {
+    color: #358940;
+    /*background: url(/../images/frontend/btn-sc-color.png) center center no-repeat*/
+}
+.selector-portal .selector a.casas:hover {
+    background-color: #358940;
+    color: #ffffff;
+}
+
+.selector-portal .selector a.empleos {
+    color: #333;
+    /*background: url(/../images/frontend/btn-se-gris.png) center center no-repeat*/
+}
+
+.selector-portal .selector a.empleos.activo {
+    color: #278fce;
+    /*background: url(/../images/frontend/btn-se-color.png) center center no-repeat*/
+}
+.selector-portal .selector a.empleos:hover {
+    background-color: #278fce;
+    color: #ffffff;
+}
+
+.selector-portal .selector a.varios {
+    color: #333;
+    /*background: url(/../images/frontend/btn-sv-gris.png) center center no-repeat*/
+}
+
+.selector-portal .selector a.varios.activo {
+    color: #f47621;
+    /*background: url(/../images/frontend/btn-sv-color.png) center center no-repeat*/
+}
+.selector-portal .selector a.varios:hover {
+    background-color: #f47621;
+    color: #ffffff;
+}
+
+.selector-portal .navbar-selector {
+    background-color: #c60018;
+    height: 30px;
+}
+
+.selector-portal .navbar-selector .navbar {
+    margin-bottom: 0
+}
+
+.selector-portal .navbar-selector .navbar-nav li a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 4px;
+}
+
+.selector-portal .navbar-selector .navbar-nav li a.activo,.selector-portal .navbar-selector .navbar-nav li a:hover {
+    background-color: transparent;
+    color: #ffa3ae;
+    text-decoration: underline
+}
+.publicar-anuncio {
+    color: #ffffff !important;
+    float: right !important;
+    height: 40px !important;
+    line-height: 39px !important;
+    padding: 0;
+    text-align: center !important;
+    width: 200px !important;
+}
+.fondo-autos {
+    background-color: #c60018;
+    background: #c60018 none repeat scroll 0 0;
+}
+.fondo-casas {
+    background-color: #358940;
+    background: #358940 none repeat scroll 0 0;
+}
+.fondo-empleos {
+    background-color: #278fce;
+    background: #278fce none repeat scroll 0 0;
+}
+.fondo-varios {
+    background-color: #f47621;
+    background: #f47621 none repeat scroll 0 0;
+}
+/*felcha publica tu anuncio*/
+.arrowText {
+    float: right;
+    height: 41px;
+    position: relative;
+    top: 6px;
+    width: 200px;
+ }
+ .arrowText:before, .arrowText:after {
+ content: " ";
+ position: absolute;
+ display: block;
+ width: 0;
+ height: 0;
+ }
+
+.arrowRight:before, .arrowRight:after {
+    border-bottom: 20px solid transparent;
+    border-top: 21px solid transparent;
+    top: 0;
+ }
+ .autos .arrowRight:after {
+    border-left: 16px solid #c60018;
+    right: -16px;
+    z-index: 2;
+ }
+  .inmuebles .arrowRight:after {
+    border-left: 16px solid #358940;
+    right: -16px;
+    z-index: 2;
+ }
+  .empleos .arrowRight:after {
+    border-left: 16px solid #278fce;
+    right: -16px;
+    z-index: 2;
+ }
+  .varios .arrowRight:after {
+    border-left: 16px solid #f47621;
+    right: -16px;
+    z-index: 2;
+ }
+ .no-space {
+    margin-left: -20px;
+ }
+ .no-hover:hover {
+    background: none!important;
+ }
+ 
+/*.arrowRight:before {
+ border-left: 16px solid #c60018;
+ right: -16px;
+ z-index: 1;
+ }*/
+/**/
+
+/* =======================================================================
+------------------ Caracteristicas para cada mercado ---------------------
+==========================================================================*/
+
+.empleos .selector-portal .navbar-selector {
+    background-color: #278fce
+}
+
+.empleos .selector-portal .navbar-selector .navbar-nav li a.activo, 
+.empleos .selector-portal .navbar-selector .navbar-nav li a:hover {
+    color: #94caed;
+}
+
+/* Inmuebles */
+
+.inmuebles .selector-portal .navbar-selector .navbar-nav li a.activo, 
+.inmuebles .selector-portal .navbar-selector .navbar-nav li a:hover {
+    color: #95c228;
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    header .navbar-superior .navbar-text {
+        text-overflow: ellipsis;
+        width: 160px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .logo-space {
+        margin-right: 0;
+    }
+    .selector-portal .selector {
+        height: 45px
+    }
+    .selector-portal .selector a {
+        width: 103px;
+        height: 49px;
+        margin-top: -4px
+    }
+    .arrowText {
+        width: 180px;
+    }
+    .publicar-anuncio{
+        width: 182px!important; 
+    }
+    .selector-portal .navbar-selector {
+        background-color: #c60018;
+        height: 80px;
+    }
+    /*.selector-portal .selector a.autos {
+        background: url(/../images/frontend/btn-sa-gris.png) top left/175px no-repeat
+    }
+    .selector-portal .selector a.autos.activo,.selector-portal .selector a.autos:hover {
+        background: url(/../images/frontend/btn-sa-color.png) top left/175px no-repeat
+    }
+    .selector-portal .selector a.casas {
+        background: url(/../images/frontend/btn-sc-gris.png) top left/175px no-repeat
+    }
+    .selector-portal .selector a.casas.activo,.selector-portal .selector a.casas:hover {
+        background: url(/../images/frontend/btn-sc-color.png) top left/175px no-repeat
+    }
+    .selector-portal .selector a.empleos {
+        background: url(/../images/frontend/btn-se-gris.png) top left/175px no-repeat
+    }
+    .selector-portal .selector a.empleos.activo,.selector-portal .selector a.empleos:hover {
+        background: url(/../images/frontend/btn-se-color.png) top left/175px no-repeat
+    }
+    .selector-portal .selector a.varios {
+        background: url(/../images/frontend/btn-sv-gris.png) top left/175px no-repeat
+    }
+    .selector-portal .selector a.varios.activo,.selector-portal .selector a.varios:hover {
+        background: url(/../images/frontend/btn-sv-color.png) top left/175px no-repeat
+    }*/
+}

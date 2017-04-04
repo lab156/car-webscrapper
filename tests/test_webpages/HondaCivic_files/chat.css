@@ -1,0 +1,226 @@
+#chat_bar {
+    background-image: url("/images/frontend/chat/chat-background-autos.jpg");
+    bottom: 0;
+    font-size: 12px;
+    font-weight: bold;
+    height: 35px;
+    position: fixed;
+    right: 10px;
+    width: 215px;   
+    z-index: 1100;
+}
+
+#chat_bar a {
+    color: white !important;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;    
+}
+
+
+.ChatBox {
+    background-color: white;
+    left: 50%;
+    margin-left: -301px;
+    position: fixed;
+    top: 70px;
+    z-index: 1101;
+    width: 602px;
+    height: 503px;
+}
+
+.ChatBox input,
+.ChatBox select {
+    border: 2px solid #cfcfcf;
+    border-radius: 0;
+    height: 46px;
+}
+
+.ChatBox .form-group {
+    margin-bottom: 20px;
+}
+
+#ChatLauncherForm {
+    padding: 20px 80px;
+}
+
+
+#ChatBackground {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;   
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+}
+
+
+#ChatBoxHeader {
+    background-image: url('/images/frontend/chat/header-background-autos.jpg');
+    width: 100%;
+    height: 73px;
+}
+
+
+#ChatBoxTitle {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    margin-left: 95px;
+    padding-top: 20px;
+}
+
+#ChatBoxSubtitle {
+    padding: 15px 80px 0;
+}
+
+
+.ChatForm {
+    padding: 28px;
+}
+
+
+#ChatDisplay {
+    background-color: #F4F4F4;
+    padding: 15px;
+    border: 2px solid #CFCFCF;
+    height: 263px;
+    overflow-y: auto;    
+}
+
+#ChatSendInput {
+    background-color: #f4f4f4;
+    border: 2px solid #cfcfcf;
+    height: 57px;
+    margin-top: 14px;
+    width: 100%;    
+    padding: 10px;
+}
+
+#ChatWelcome {
+    border-bottom: 1px solid #cfcfcf;
+    margin-bottom: 10px;
+    padding-bottom: 7px;    
+}
+
+#ChatLauncherStartButton {
+    margin-right: 14px;
+    font-weight: bold;
+}
+
+#ChatLauncherStartButton:before {
+    border-bottom: 16.5px solid transparent;
+    border-left: 10px solid #c60018;
+    border-top: 16.5px solid transparent;
+    bottom: 58px;
+    content: "";
+    height: 0;
+    left: 508px;
+    position: absolute;
+    width: 0;
+}
+
+#ChatCloseButton {
+    color: #757575;
+    margin-top: 12px;
+}
+
+#ChatSendButton {
+    font-weight: bold;
+    margin-right: 14px;
+    margin-top: 0;
+}
+
+#ChatSendButton:before {
+    border-bottom: 16.5px solid transparent;
+    border-left: 10px solid #c60018;
+    border-top: 16.5px solid transparent;
+    bottom: 14px;
+    content: "";
+    height: 0;
+    left: 560px;
+    position: absolute;
+    width: 0;
+}
+
+#ChatControl {
+    float: left;
+    height: 72px;
+    width: 100%;    
+}
+
+
+.ChatSystemMessage {
+    font-style: italic;
+}
+
+.ChatRecordInSender, .ChatRecordOutSender {
+    font-weight: bold;
+}
+
+#ChatButtonContainer {
+    float: left;
+    margin-top: 20px;
+    width: 100%;    
+}
+
+
+/* Inmuebles */
+.inmuebles #chat_bar {
+    background-image: url("/images/frontend/chat/chat-background-inmuebles.jpg");
+}
+
+.inmuebles #ChatBoxHeader {
+    background-image: url('/images/frontend/chat/header-background-inmuebles.jpg');    
+}
+
+.inmuebles #ChatLauncherStartButton:before {
+    border-left: 10px solid #358940;
+}
+
+.inmuebles #ChatSendButton:before {
+    border-left: 10px solid #358940;
+}
+
+
+/* Empleos */
+.empleos #chat_bar {
+    background-image: url("/images/frontend/chat/chat-background-empleos.jpg");
+}
+
+.empleos #ChatBoxHeader {
+    background-image: url('/images/frontend/chat/header-background-empleos.jpg');    
+}
+
+.empleos #ChatLauncherStartButton:before {
+    border-left: 10px solid #248bca;
+}
+
+.empleos #ChatSendButton:before {
+    border-left: 10px solid #248bca;
+}
+
+
+/* Varios */
+.varios #chat_bar {
+    background-image: url("/images/frontend/chat/chat-background-varios.jpg");
+}
+
+.varios #ChatBoxHeader {
+    background-image: url('/images/frontend/chat/header-background-varios.jpg');    
+}
+
+.varios #ChatLauncherStartButton:before {
+    border-left: 10px solid #F47621;
+}
+
+.varios #ChatSendButton:before {
+    border-left: 10px solid #F47621;
+}
+
