@@ -105,6 +105,20 @@ class CarDB(object):
         else:
             return None
 
+    def add_car_model(self, make, model, year):
+        #First check if the car Id does not exist yet
+        search_res = self.lookup_carId(make, model, year)
+        if search_res:
+            raise ValueError('Car Model with id %s already exists'%search_res)
+        else:
+            insert_sql = '''insert into VehicleModelYear (make, model, year) values ( %s, %s, %s );'''
+            self.open()
+            self.cursor.execute(insert_sql, (make, model, year))
+            self.cnx.commit()
+            self.close()
+            return self.lookup_carId(make, model, year)
+            
+
 class SC(object):
     def __init__(self, url, **kwargs):
         self.url = url
