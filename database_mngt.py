@@ -1,6 +1,6 @@
 import mysql.connector as sql
 from datetime import date, datetime
-import seleniun_mngmt  as monitor
+#import seleniun_mngmt  as SelMan
 import db_info
 
 DB = db_info.DB_info()
@@ -21,7 +21,7 @@ class CarDB(object):
         CREATE TABLE `CarPriceInfo` (
         `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
         `url` VARCHAR(200) NOT NULL,
-        `IdWeb` VARCHAR(50) NULL,
+        `IdWeb` VARCHAR(50) NULL UNIQUE,
         `precio` INT UNSIGNED NULL,
         `car_id` INT UNSIGNED NOT NULL, 
         `ubicacion` VARCHAR(200),
@@ -63,32 +63,21 @@ class CarDB(object):
         self.cursor.close()
         self.cnx.close()
 
-    def create_entry(self, car_id, url, **kwargs):
-        names_lst = ['car_id', 'url', 'fecha_creacion']
-        values_lst = [car_id,  url, datetime.now()]
+
+    def create_entry(self, **kwargs):
+        keys_lst = kwargs.keys()
+        values_lst = kwargs.values()
         str_lst = ['%s']
 
 
         precio = kwargs.get('precio', None)
         if precio:
-            names_lst.append('precio')
+            keys_lst.append('precio')
             values_lst.append(precio)
-
-        #IdWeb puede ser especificada como argumento
-        # o leida de la url 
-        id_web = kwargs.get('IdWeb', None)
-        names_lst.append('IdWeb')
-        if id_web:
-            values_lst.append(id_web)
-        else:
-            is_superclasif = SC(url)
-            if is_superclasif.check():
-                values_lst.append(is_superclasif.id_web)
-
 
         self.open()
         add_car_price = ''' INSERT INTO `CarPriceInfo` ( %s ) VALUES 
-         ( %s )'''%(', '.join(names_lst), ', '.join(len(values_lst)*str_lst))
+         ( %s )'''%(', '.join(keys_lst), ', '.join(len(values_lst)*str_lst))
         self.cursor.execute(add_car_price, values_lst)
         self.cnx.commit()
         self.close()
@@ -105,11 +94,11 @@ class CarDB(object):
         else:
             return None
 
-    def add_car_model(self, make, model, year):
+    def get_or_add_car_model(self, make, model, year):
         #First check if the car Id does not exist yet
         search_res = self.lookup_carId(make, model, year)
         if search_res:
-            raise ValueError('Car Model with id %s already exists'%search_res)
+            return search_res
         else:
             insert_sql = '''insert into VehicleModelYear (make, model, year) values ( %s, %s, %s );'''
             self.open()

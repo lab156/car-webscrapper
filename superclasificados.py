@@ -1,25 +1,29 @@
 from selenium import webdriver as wd
 from selenium import common
+import database_mngt as datm
+import seleniun_mngmt as selm
 
 bro = wd.Chrome('/usr/bin/chromedriver')
 bro2 = wd.Chrome('/usr/bin/chromedriver')
 
-bro.get('http://www.elheraldo.hn')
 con = set()
-lis = bro.find_elements_by_class_name('sc-item')
-for l in lis:
-   url = l.find_element_by_tag_name('a').get_attribute('href')
-   con.add(url)
-   bro2.get(url)
-   try:
-       f = bro2.find_element_by_class_name('col-xs-9')
-       tit = f.find_element_by_tag_name('h2').text
-       precio = f.find_element_by_tag_name('p').text
-   except(common.exceptions.NoSuchElementException):
-       tit = 'Pagina Problematica'
-       precio = url
+lis = selm.get_url_list(bro, 'http://www.elheraldo.hn')
+db = datm.CarDB()
+for url in lis:
+    if 'autos' in url:
+        con.add(url)
+        car = selm.CarMan(url, bro2)
+        tit = car.get_model_title()
+        precio = car.precio()
+        make = car.maker()
+        model = car.model()
+        year = car.year()
+        car_id = db.get_or_add_car_model(make,model,year)
 
-   print('index: %s url: %s %s precio: %s'%(l.get_attribute('data-slick-index'), url.split('/')[4], tit, precio))
+        print('index: %s url: %s %s precio: %s'%(car_id, url.split('/')[4], tit, precio))
+    else:
+        tit = 'Es una casa'
+        precio = ''
    
 
 bro.close()

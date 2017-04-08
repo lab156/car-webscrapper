@@ -45,9 +45,9 @@ class CarMan(object):
         #    raise ValueError('URL no parece correcto %s'%self.split_url[2])
 
         if args:
-            self.bro = wd.Chrome('/usr/bin/chromedriver')
-        else:
             self.bro = args[0]
+        else:
+            self.bro = wd.Chrome('/usr/bin/chromedriver')
         self.bro.get(url)
         self.dic = self.get_carac_bas()
 
