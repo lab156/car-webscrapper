@@ -33,10 +33,12 @@ def id_web(id_text):
     '''
     >>> id_web('ID WEB: 175466')
     '175466'
+    >>> id_web('175466')
+    '175466'
     '''
-    resu = re.findall( r'ID WEB: (\d+)', id_text)
+    resu = re.findall(r'(ID WEB: )?(\d+)' , id_text)
     if len(resu) > 0:
-        return resu[0]
+        return resu[0][1]
     else:
         raise ValueError('No hay resultados en la IdWeb')
 

@@ -78,6 +78,7 @@ class CarMan(object):
         dic = {}
         e1 = self.bro.find_element_by_class_name('caracteristicas')
         dic['desc'] = e1.text.split('\n')[0]
+        dic['id_web'] = self.IdWeb()
         tabla = e1.find_element_by_class_name('table')
         for row in  tabla.find_elements_by_tag_name('tr'):
             for col in row.find_elements_by_tag_name('td'):
@@ -87,10 +88,20 @@ class CarMan(object):
         return dic
 
     def IdWeb(self):
+        try:
+            id_web = self.dic['id_web']
+        except AttributeError:
+            id_web = self.id_web()
+        return clean.id_web(id_web)
+
+    def id_web(self):
+        ''' Gets the id_web directly from the webpage's elements
+        this changes if the page the browser is currently showing
+        changes'''
         e1 = self.bro.find_element_by_class_name('cabecera-detalle')
         e2 = e1.find_element_by_class_name('col-xs-3')
         e3 = e2.find_element_by_class_name('id-web')
-        return clean.id_web(e3.text)
+        return e3.text
 
 
     def precio(self):
