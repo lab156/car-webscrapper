@@ -1,4 +1,5 @@
 import re
+import datetime as dt
 
 def precio(precio):
     '''
@@ -182,6 +183,18 @@ def tipo(t):
         return 'SUV'
     else:
         return None
+
+def fecha_pub(mens):
+    '''
+    >>> fecha_pub('Publicado: 24/03/2017')
+    datetime.date(2017, 3, 24)
+    '''
+    search = re.findall('Publicado: (\d+)/(\d+)/(\d+)', mens)
+    if search:
+        return dt.date(int(search[0][2]), int(search[0][1]), int(search[0][0]))
+    else:
+        return None
+
 
 
 if __name__ == "__main__":

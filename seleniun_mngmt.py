@@ -60,6 +60,15 @@ class CarMan(object):
         e2 = e1.find_element_by_class_name('col-xs-9')
         e3 = e2.find_element_by_tag_name('h2')
         return e3.text
+
+    def get_pub_date(self):
+        '''
+        gets the Publicado date from the currently loaded webpage
+        '''
+        e1 = self.bro.find_element_by_class_name('cabecera-detalle')
+        e2 = e1.find_element_by_class_name('info-extra')
+        return e2.text
+
         
     def get_price_title(self):
         '''
@@ -79,6 +88,7 @@ class CarMan(object):
         e1 = self.bro.find_element_by_class_name('caracteristicas')
         dic['desc'] = e1.text.split('\n')[0]
         dic['id_web'] = self.IdWeb()
+        dic['pub_date'] = self.get_pub_date()
         tabla = e1.find_element_by_class_name('table')
         for row in  tabla.find_elements_by_tag_name('tr'):
             for col in row.find_elements_by_tag_name('td'):
@@ -103,6 +113,8 @@ class CarMan(object):
         e3 = e2.find_element_by_class_name('id-web')
         return e3.text
 
+    def fecha_pub(self):
+        return clean.fecha_pub(self.dic['pub_date'])
 
     def precio(self):
         '''

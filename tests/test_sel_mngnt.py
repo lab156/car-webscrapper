@@ -4,6 +4,7 @@ import sys
 sys.path.insert(0,'..')
 from selenium import webdriver as wd
 import seleniun_mngmt as sel
+import datetime
 
 class CarManTest(unittest.TestCase):
     @classmethod
@@ -57,6 +58,12 @@ class CarManTest(unittest.TestCase):
 
     def test_ubicacion(self):
         self.assertEqual(self.dic['HondaCivic.html'].ubicacion(), 'Tegucigalpa')
+
+    def test_fecha_pub(self):
+        self.assertEqual(self.dic['FordF250.html'].fecha_pub(),
+                datetime.date(2017,3,8))
+        self.assertEqual(self.dic['HondaCivic.html'].fecha_pub(),
+                datetime.date(2017,3,19))
 
 
 
