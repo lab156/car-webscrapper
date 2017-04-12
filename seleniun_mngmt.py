@@ -38,11 +38,7 @@ class CarMan(object):
         usando Selenium.
         No deberia de intervenir en la base de datos.
         '''
-        self.split_url = url.split('/')
-        #Quitamos esta validacion para que las tests corran
-        #if 'autos' not in self.split_url[2]:
-            #El dominio deberia de ser autos.superclasificados.hn
-        #    raise ValueError('URL no parece correcto %s'%self.split_url[2])
+        self._url = url
 
         if args:
             self.bro = args[0]
@@ -135,6 +131,10 @@ class CarMan(object):
         return clean.kms(self.dic['Kilometraje'])
     def cilindraje(self):
         return clean.cilindraje(self.dic['Cilindraje'])
+    def tipo(self):
+        ''' Esta es la mejor forma que tengo actualmente de 
+        predecir el tipo de carro '''
+        return clean.tipo_url(self._url)
     def descripcion(self):
         return self.dic['desc']
     def transmision(self):

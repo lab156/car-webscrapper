@@ -20,7 +20,7 @@ class CarDB(object):
         table_def = '''
         CREATE TABLE `CarPriceInfo` (
         `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-        `url` VARCHAR(200) NOT NULL,
+        `url` VARCHAR(1000) NOT NULL,
         `IdWeb` VARCHAR(50) NULL UNIQUE,
         `precio` INT UNSIGNED NULL,
         `car_id` INT UNSIGNED NOT NULL, 
@@ -65,21 +65,25 @@ class CarDB(object):
 
 
     def create_entry(self, **kwargs):
-        keys_lst = kwargs.keys()
-        values_lst = kwargs.values()
+        keys_lst = list(kwargs.keys())
+        values_lst = list(kwargs.values())
         str_lst = ['%s']
 
 
-        precio = kwargs.get('precio', None)
-        if precio:
-            keys_lst.append('precio')
-            values_lst.append(precio)
+#        precio = kwargs.get('precio', None)
+#        if precio:
+#            keys_lst.append('precio')
+#            values_lst.append(precio)
 
         self.open()
         add_car_price = ''' INSERT INTO `CarPriceInfo` ( %s ) VALUES 
-         ( %s )'''%(', '.join(keys_lst), ', '.join(len(values_lst)*str_lst))
-        self.cursor.execute(add_car_price, values_lst)
-        self.cnx.commit()
+         ( %s );'''%(', '.join(keys_lst), ', '.join(len(values_lst)*str_lst))
+        try:
+            self.cursor.execute(add_car_price, values_lst)
+            self.cnx.commit()
+        except sql.errors.IntegrityError:
+            print('Repetido...')
+
         self.close()
 
     def lookup_carId(self, make, model, year):
@@ -104,6 +108,7 @@ class CarDB(object):
             self.open()
             self.cursor.execute(insert_sql, (make, model, year))
             self.cnx.commit()
+
             self.close()
             return self.lookup_carId(make, model, year)
             

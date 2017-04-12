@@ -195,6 +195,24 @@ def fecha_pub(mens):
     else:
         return None
 
+def tipo_url(url):
+    '''
+    >>> tipo_url('https://autos.superclasificados.hn/aviso/174409/Venta-Turismo?utm_medium=Widget-sc&utm_source=elheraldo.hn&utm_campaign=widget-elheraldo')
+    'Turismo'
+    >>> tipo_url('https://autos.superclasificados.hn/aviso/175859/Venta-Pick-Ups?utm_medium=Widget-sc&utm_source=elheraldo.hn&utm_campaign=widget-elheraldo')
+    'Pickup'
+    >>> tipo_url('https://autos.superclasificados.hn/aviso/177394/Venta-Camionetas?utm_medium=Widget-sc&utm_source=elheraldo.hn&utm_campaign=widget-elheraldo')
+    'SUV'
+    '''
+    if 'Venta-Turismo' in url:
+        return 'Turismo'
+    elif 'Venta-Pick-Ups' in url:
+        return 'Pickup'
+    elif 'Venta-Camionetas' in url:
+        return 'SUV'
+    else:
+        return None
+
 
 
 if __name__ == "__main__":
