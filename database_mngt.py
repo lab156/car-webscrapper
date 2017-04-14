@@ -6,6 +6,7 @@ import db_info
 DB = db_info.DB_info()
 
 
+
 class CarDB(object):
     def __init__(self, *args, **kwargs):
         self.user = kwargs.get('user', DB.user)
@@ -86,6 +87,22 @@ class CarDB(object):
 
         self.close()
 
+    def check_idweb(self, idweb):
+        '''
+        Checks if entry with given idweb already exists in database
+        '''
+        self.open()
+        lookup_sql = '''SELECT id FROM CarPriceInfo WHERE IdWeb=( %s );'''
+        self.cursor.execute(lookup_sql, (idweb,))
+        result_lst = [ Id for Id in self.cursor ]
+        self.close()
+        if result_lst:
+            return True
+        else:
+            return False
+
+
+
     def lookup_carId(self, make, model, year):
         self.open()
         lookup_sql = '''SELECT id FROM VehicleModelYear WHERE make=( %s ) AND model=( %s ) AND year=( %s );'''
@@ -97,6 +114,7 @@ class CarDB(object):
             return result_list[0][0]
         else:
             return None
+
 
     def get_or_add_car_model(self, make, model, year):
         #First check if the car Id does not exist yet

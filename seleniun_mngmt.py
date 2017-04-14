@@ -24,6 +24,11 @@ def get_url_list(browser, url, *args, **kwargs):
         print('Sucedio un timeout')
         return None
     lis = browser.find_elements_by_class_name('sc-item')
+    if lis:
+        pass
+    else:
+        #if the carrousel of has no sc-item, try owl-item
+        lis = browser.find_elements_by_class_name('owl-item')
     url_lst = []
     for l in lis:
        url = l.find_element_by_tag_name('a').get_attribute('href')
@@ -140,7 +145,7 @@ class CarMan(object):
     def transmision(self):
         opciones_meca = ['mecanico', 'mecanica', 'mecan', 'mecánico', 'mecánica']
         opciones_auto = ['automatica', 'automatico', 'mecan', 'automática', 'automático']
-        Descripcion = self.descripcion()
+        Descripcion = self.descripcion().lower()
 
         if any(palabra.lower() in Descripcion for palabra in opciones_meca):
             return clean.transmision('mecan')
