@@ -48,7 +48,7 @@ class CarManTest(unittest.TestCase):
         self.assertEqual(self.dic['HondaCivic.html'].cilindraje(), None)
 
     def test_transmision(self):
-        self.assertEqual(self.dic['HondaCivic.html'].transmision(), None)
+        self.assertEqual(self.dic['HondaCivic.html'].transmision(), 'auto')
         self.assertEqual(self.dic['Corolla.html'].transmision(), 'auto')
         self.assertEqual(self.dic['FordF250.html'].transmision(), 'auto')
 
