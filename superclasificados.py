@@ -14,6 +14,7 @@ def visitar(url, bro2, db):
         car = selm.CarMan(url, bro2)
     except common.exceptions.NoSuchElementException:
         print('Timeout en la url: %s '%url)
+        return []
     except KeyError:
         print('Hubo KeyError en CarMan, la url: %s talves no sea de un carro'%url)
         return []
