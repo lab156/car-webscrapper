@@ -27,20 +27,28 @@ def visitar(url, bro2, db):
     car_id = db.get_or_add_car_model(make,model,year)
 
     print('index: %s url: %s %s precio: %s'%(car_id, url.split('/')[4], tit, precio))
-    db.create_entry(url = url,
-            IdWeb = int(car.IdWeb()),
-            precio = car.precio(),
-            car_id = car_id,
-            ubicacion = car.ubicacion(),
-            condicion = car.condicion(),
-            kms = car.kms(),
-            cilindraje = car.cilindraje(),
-            color = car.color(),
-            transmision = car.transmision(),
-            carburacion = car.carburacion(),
-            fecha_pub = car.fecha_pub(),
-            fecha_creacion = dt.date.today(),
-            tipo = car.tipo())
+    try:
+        db.create_entry(url = url,
+                IdWeb = int(car.IdWeb()),
+                precio = car.precio(),
+                car_id = car_id,
+                ubicacion = car.ubicacion(),
+                condicion = car.condicion(),
+                kms = car.kms(),
+                cilindraje = car.cilindraje(),
+                color = car.color(),
+                transmision = car.transmision(),
+                carburacion = car.carburacion(),
+                fecha_pub = car.fecha_pub(),
+                fecha_creacion = dt.date.today(),
+                tipo = car.tipo())
+    except KeyError as K:
+        print('hubo un Keyerror: %s'%K)
+        # THIS ERROR COMMONLY SHOWS UP WHEN 
+        # WHEN THE ITEM IS NOT A CAR AND THUS 
+        # NOT RELEVANT SO ILL EXIT THE FUNCTION
+        # WITH EMPTY SEARCH
+        return []
     return selm.get_url_list(bro, url)
 
 def recur_engine(url, url_lst, bro, db):

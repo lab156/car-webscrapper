@@ -22,7 +22,7 @@ def get_url_list(browser, url, *args, **kwargs):
         browser.get(url)
     except(common.exceptions.TimeoutException):
         print('Sucedio un timeout')
-        return None
+        return []
     lis = browser.find_elements_by_class_name('sc-item')
     if lis:
         pass
