@@ -19,12 +19,15 @@ def visitar(url, bro2, db):
         print('Hubo KeyError en CarMan, la url: %s talves no sea de un carro'%url)
         return []
 
-    tit = car.get_model_title()
-    precio = car.precio()
-    make = car.maker()
-    model = car.model()
-    year = car.year()
-    car_id = db.get_or_add_car_model(make,model,year)
+    try:
+        tit = car.get_model_title()
+        precio = car.precio()
+        make = car.maker()
+        model = car.model()
+        year = car.year()
+        car_id = db.get_or_add_car_model(make,model,year)
+    except KeyError as K:
+        print('Hubo un keyerror, falta el key: %s, '%K)
 
     print('index: %s url: %s %s precio: %s'%(car_id, url.split('/')[4], tit, precio))
     try:

@@ -21,6 +21,9 @@ class ModelQueryFit(object):
         return self.df[self.df[col]>0]
 
     def npa(self, col):
+        '''
+        return self as numpy array
+        '''
         return np.asarray(self.outliers()[col])
 
     def log_linear_fit(self):

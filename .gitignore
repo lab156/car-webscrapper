@@ -6,3 +6,7 @@
 automotive-model-year-data
 db_info.py
 
+#Ignore sql backups and json temporary lookups
+*.sql
+*.json
+
