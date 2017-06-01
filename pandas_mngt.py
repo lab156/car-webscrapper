@@ -43,6 +43,12 @@ class ModelQueryFit(object):
         upp = pd.DataFrame.max(self.df['year'])
         return (np.floor(low - (upp - low)*0.1 ), np.ceil(upp + (upp - low)*0.1 ))
 
+    def json_to_plot(self, filename):
+        '''
+        json of points that should go in the plot
+        '''
+        return self.outliers().to_json(orient='records', path_or_buf=filename)
+
 
 if __name__ == '__main__':
     print(sys.argv)
