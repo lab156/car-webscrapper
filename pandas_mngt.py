@@ -22,9 +22,16 @@ class ModelQueryFit(object):
 
     def npa(self, col):
         '''
-        return self as numpy array
+        return self as numpy array without outliers
         '''
         return np.asarray(self.outliers()[col])
+
+    def m(self, x):
+        '''
+        Evaluation of solution model
+        '''
+        npsol = self.log_linear_fit()
+        return np.exp(npsol[1])*np.exp(npsol[0]*x)
 
     def log_linear_fit(self):
         car = self.outliers()
@@ -49,19 +56,25 @@ class ModelQueryFit(object):
         '''
         return self.outliers().to_json(orient='records', path_or_buf=filename)
 
+    def json_to_curve(self, filename):
+        '''
+        json file to plot fitting curve
+        '''
+        X = np.arange(*self.range(), 1.0)
+        Y = self.m(X)
+        js = np.append(X[...,np.newaxis],Y[...,np.newaxis],axis=1) 
+        return pd.DataFrame(data=js[:,:], columns=['year', 'precio'])
 
 if __name__ == '__main__':
     print(sys.argv)
     m = ModelQueryFit(*sys.argv[1:])
     npsol = m.log_linear_fit()
     xreg = np.arange(*m.range(), 1.0)
-    yreg = np.exp(npsol[1])*np.exp(npsol[0]*xreg)
+    yreg = m.m(xreg)
     x = m.npa('year')
     y = m.npa('precio')
     plt.scatter(x,y)
     plt.plot(xreg,yreg,color='red')
     plt.savefig('/tmp/pic.png')
-
-
 
 
