@@ -50,15 +50,21 @@ class ModelQueryFit(object):
         upp = pd.DataFrame.max(self.df['year'])
         return (np.floor(low - (upp - low)*0.1 ), np.ceil(upp + (upp - low)*0.1 ))
 
-    def json_to_plot(self, filename):
+    def json_to_plot(self, filename=None):
         '''
         json of points that should go in the plot
+        if no filename is given returns a pandas dataframe
         '''
-        return self.outliers().to_json(orient='records', path_or_buf=filename)
+        df = self.outliers()
+        if filename:
+            return  df.to_json(orient='records', path_or_buf=filename)
+        else:
+            return df
 
-    def json_to_curve(self, filename):
+    def json_to_curve(self, filename=None):
         '''
         json file to plot fitting curve
+        if no filename is given returns a pandas dataframe
         '''
         X = np.arange(*self.range(), 1.0)
         Y = self.m(X)
