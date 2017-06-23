@@ -63,7 +63,11 @@ class ModelQueryFit(object):
         X = np.arange(*self.range(), 1.0)
         Y = self.m(X)
         js = np.append(X[...,np.newaxis],Y[...,np.newaxis],axis=1) 
-        return pd.DataFrame(data=js[:,:], columns=['year', 'precio'])
+        js_df = pd.DataFrame(data=js[:,:], columns=['year', 'precio'])
+        if filename:
+            return js_df.to_json(orient='records', path_or_buf=filename)
+        else:
+            return js_df
 
 if __name__ == '__main__':
     print(sys.argv)
