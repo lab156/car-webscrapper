@@ -59,7 +59,7 @@ class ModelQueryFit(object):
         if filename:
             return  df.to_json(orient='records', path_or_buf=filename)
         else:
-            return df
+            return df.to_json(orient='records') 
 
     def json_to_curve(self, filename=None):
         '''
@@ -73,7 +73,7 @@ class ModelQueryFit(object):
         if filename:
             return js_df.to_json(orient='records', path_or_buf=filename)
         else:
-            return js_df
+            return js_df.to_json(orient='records')
 
 if __name__ == '__main__':
     print(sys.argv)
