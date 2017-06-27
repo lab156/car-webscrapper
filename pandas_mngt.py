@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import database_mngt as db
+from . import database_mngt as db
 import scipy.optimize as opt
 import sys
 import matplotlib.pyplot as plt

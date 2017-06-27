@@ -1,11 +1,9 @@
 import mysql.connector as sql
 from datetime import date, datetime
 #import seleniun_mngmt  as SelMan
-import db_info
+from . import db_info
 
 DB = db_info.DB_info()
-
-
 
 class CarDB(object):
     def __init__(self, *args, **kwargs):
