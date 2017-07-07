@@ -75,7 +75,5 @@ while len(lis)>0:
         else:
             url_lst = visitar(url, bro, db)
             lis += url_lst
-
-
             
 bro.close()

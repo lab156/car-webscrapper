@@ -2,6 +2,7 @@ import mysql.connector as sql
 from datetime import date, datetime
 #import seleniun_mngmt  as SelMan
 from . import db_info
+import pandas as pd
 
 DB = db_info.DB_info()
 
@@ -22,6 +23,7 @@ class CarDB(object):
         `url` VARCHAR(1000) NOT NULL,
         `IdWeb` VARCHAR(50) NULL UNIQUE,
         `precio` INT UNSIGNED NULL,
+        `moneda` enum('HNL', 'USD') NULL,
         `car_id` INT UNSIGNED NOT NULL, 
         `ubicacion` VARCHAR(200),
         `condicion` enum('used', 'new', 'scrap') NULL,
@@ -127,7 +129,17 @@ class CarDB(object):
 
             self.close()
             return self.lookup_carId(make, model, year)
-            
+
+    def count_by_model(self, cnt_limit=20):
+        '''
+        returns df with the models having the largest number of instances
+        '''
+        sql_query = '''select  V.make, V.model, count(C.id) as res_count from CarPriceInfo as C join VehicleModelYear as V on V.id = C.car_id group by V.model having count(C.id)>{} order by count(C.id) desc;'''
+        self.open()
+        df_res = pd.read_sql(sql_query.format(cnt_limit, self.cnx), con=self.cnx)
+        self.close()
+        return df_res.to_dict(orient='records')
+
 
 class SC(object):
     def __init__(self, url, **kwargs):
