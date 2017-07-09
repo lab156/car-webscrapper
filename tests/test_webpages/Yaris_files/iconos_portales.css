@@ -1,0 +1,35 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 26/05/2016 19:16
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./iconos_portales.eot");
+  src: url("./iconos_portales.eot?#iefix") format("embedded-opentype"),
+       url("./iconos_portales.woff") format("woff"),
+       url("./iconos_portales.ttf") format("truetype"),
+       url("./conos_ortales.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Iconos_portales.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="iconos_portales-"]:before, [class*=" iconos_portales-"]:before,
+[class^="iconos_portales-"]:after, [class*=" iconos_portales-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+/*margin-left: 20px;*/
+}
+
+.iconos_portales-hands:before { content: "\f100"; }
+.iconos_portales-internet:before { content: "\f101"; }
+.iconos_portales-suitcase:before { content: "\f102"; }
+.iconos_portales-transport:before { content: "\f103"; }

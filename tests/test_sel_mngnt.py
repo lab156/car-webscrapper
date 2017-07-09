@@ -3,14 +3,14 @@ import os.path
 import sys
 sys.path.insert(0,'..')
 from selenium import webdriver as wd
-import seleniun_mngmt as sel
+from .. import seleniun_mngmt as sel
 import datetime
 
 class CarManTest(unittest.TestCase):
     @classmethod
     def setUpClass(self):
-        pages_dir = os.path.join(os.path.abspath(os.curdir),'test_webpages')
-        page_list = ['HondaCivic.html', 'Corolla.html', 'FordF250.html']
+        pages_dir = os.path.join(os.path.abspath(os.curdir), 'scrapper', 'tests','test_webpages')
+        page_list = ['HondaCivic.html', 'Corolla.html', 'FordF250.html' , 'Yaris.html']
         path = os.path.join(pages_dir, page_list[0]) 
         browser = wd.Chrome('/usr/bin/chromedriver')
         self.dic = {}
@@ -64,6 +64,12 @@ class CarManTest(unittest.TestCase):
                 datetime.date(2017,3,8))
         self.assertEqual(self.dic['HondaCivic.html'].fecha_pub(),
                 datetime.date(2017,3,19))
+
+    def test_moneda(self):
+        self.assertEqual(self.dic['Yaris.html'].moneda(), 'USD')
+        self.assertEqual(self.dic['Corolla.html'].moneda(), 'HNL')
+        self.assertEqual(self.dic['HondaCivic.html'].moneda(), 'HNL')
+        self.assertEqual(self.dic['FordF250.html'].moneda(), 'HNL')
 
 
 

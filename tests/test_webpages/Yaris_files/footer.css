@@ -1,0 +1,158 @@
+footer .contenedor-links {
+    background: url(/../images/frontend/trama.png);
+    padding: 30px 0
+}
+
+footer .contenedor-links .listado {
+    margin-top: 12px
+}
+
+footer .contenedor-links .cabecera-links {
+    width: auto;
+    /*float: left*/
+    display: inline-block;
+    height: 32px;
+    background: #c60018;
+    position: relative;
+    border-radius: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 7px 12px 8px;
+    top: 9px
+}
+
+footer .contenedor-links .cabecera-links:before {
+    border-bottom: 16px solid transparent;
+    border-left: 16px solid #c60018;
+    border-top: 16px solid transparent;
+    content: '';
+    height: 0;
+    left: 100%;
+    position: absolute;
+    top: 0;
+    width: 0
+}
+
+footer .contenedor-links ul {
+    margin-top: 20px
+}
+
+footer .contenedor-links ul li {
+    color: #fff
+}
+
+footer .contenedor-links ul a {
+    color: #a7a9ab
+}
+
+footer .contenedor-links ul a:hover {
+    color: #e6e7e8
+}
+
+footer .pie {
+    padding: 10px 0
+}
+
+footer .pie p {
+    color: #464850;
+    font-size: 11px;
+    margin-top: 20px
+}
+
+footer .pie p a {
+    color: #c60018
+}
+
+footer .pie .rbm-pie { 
+    color: #000!important;    
+    float: right;
+    font-style: italic;
+    padding-right: 0px
+}
+
+footer .pie .rbm-pie a{
+    color: #000!important;
+    text-decoration:none!important;
+}
+
+footer .pie .rbm-pie img{
+      vertical-align: top;
+}
+
+
+@media ( min-width :768px) and (max-width:991px) {
+    footer .contenedor-links .cabecera-links {
+        font-size: 12px
+    }
+    footer .pie p.nota-copy {
+        text-align: right
+    }
+}
+
+
+@media ( min-width :992px) and (max-width:1199px) {
+    footer .contenedor-links .cabecera-links {
+        font-size: 12px
+    }
+}
+
+
+@media ( min-width :992px) {
+    footer .contenedor-links .listado.primero {
+        padding-left: 50px
+    }
+}
+
+
+.horizontal footer .col-md-3 {
+    padding-right: 0;
+}
+
+/* =======================================================================
+---------- Caracteristicas para cada mercado OPSA           --------------
+==========================================================================*/
+
+/* Inmuebles */
+
+.inmuebles footer .contenedor-links .cabecera-links {
+    background: #358940;
+}
+
+.inmuebles footer .pie p a {
+    color: #358940
+}
+
+.inmuebles footer .contenedor-links .cabecera-links:before {
+    border-left: 16px solid #358940;
+}
+
+
+/* Varios */
+
+.varios footer .contenedor-links .cabecera-links {
+    background: #F47621;
+}
+
+.varios footer .pie p a {
+    color: #F47621
+}
+
+.varios footer .contenedor-links .cabecera-links:before {
+    border-left: 16px solid #F47621;
+}
+
+/* Empleos */
+
+.empleos footer .contenedor-links .cabecera-links {
+    background: #278fce;
+}
+
+.empleos footer .pie p a {
+    color: #278fce;
+}
+
+.empleos footer .contenedor-links .cabecera-links:before {
+    border-left: 16px solid #278fce;
+}

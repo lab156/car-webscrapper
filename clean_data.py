@@ -16,6 +16,23 @@ def precio(precio):
     else:
         return None
 
+def moneda(precio):
+    '''
+    >>> moneda('$ 13,500')
+    'USD'
+    >>> moneda('L. 180,000')
+    'HNL'
+    >>> moneda('180,000')
+
+    '''
+    if precio[:2] == 'L.':
+        return 'HNL'
+    elif precio[:2] == '$ ':
+        return 'USD'
+    else:
+        return None
+
+
 def maker(marca):
     '''
     >>> maker('Toyota')

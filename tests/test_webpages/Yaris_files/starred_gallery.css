@@ -1,0 +1,629 @@
+.featured-list {
+    /*float: left;*/
+    margin-bottom: 25px;
+    /*width: 100%;*/
+}
+
+.featured-list article {
+    float: left;
+    width: 100%;
+    -webkit-box-shadow: 0 0 4px 0 rgba(214, 214, 214, 1);
+    -moz-box-shadow: 0 0 4px 0 rgba(214, 214, 214, 1);
+    box-shadow: 0 0 4px 0 rgba(214, 214, 214, 1);
+    border: 1px solid #d6d6d6;
+    margin-bottom: 10px;
+}
+
+.featured-list article .page-header {
+    border-bottom: 2px solid #f19321;
+    min-height: 50px;
+    margin: 0;
+    padding: 0 0 0 15px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none !important;
+}
+
+.featured-list article .page-header img {
+    float: right;
+}
+
+.featured-list article .page-header .check, .featured-list article figure img {
+    float: left;
+}
+
+.featured-list article .page-header .check {
+    float: left;
+    margin-top: 17px;
+}
+
+.featured-list article .page-header .title {
+    display: block;
+    float: left;
+    padding: 0 0 0 10px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #f19321;
+    margin-top: 16px;
+}
+
+.featured-list article figure {
+    float: left;
+    width: 203px;
+    height: 138px;
+    position: relative;
+    margin-right: 15px;
+}
+
+.orange-txt {
+    display: block;
+    margin: 0 0 11px;
+    font-size: 22px;
+    line-height: 26px;
+    color: #f19321;
+    font-weight: 600;
+}
+
+.featured-list article p {
+    font-size: 13px;
+    line-height: 17px;
+    padding: 0;
+    color: #111;
+}
+
+.small-txt {
+    display: block;
+    line-height: 15px;
+    font-size: 11px;
+    color: #111;
+}
+
+.featured-list .ads {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.featured-list .ads img, .predios-box .ads img {
+    float: none;
+    margin: 0 auto;
+}
+
+/* STARRED WHOLESALES HOME */
+.predios-box, #whosalers {
+    float: left;
+    width: 100%;
+    margin: 0px 0;
+}
+
+#whosalers .belt {
+    width: 895px;
+    height: 165px;
+    display: block;
+    overflow: hidden;
+    float: left;
+}
+
+#whosalers .brand {
+    width: 166px;
+    height: 165px;
+    float: left;
+    list-style-type: none;
+}
+
+#whosalers .item {
+    margin: 0 10px;
+    padding: 0 0 7px;
+    border-bottom: 1px solid #FFF;
+}
+
+#whosalers .item:hover, #c-predios .item:active, #c-predios .item:focus {
+    border-color: #f19321;
+}
+
+#whosalers .item img {
+    display: block;
+    margin: 0 0 5px
+}
+
+#whosalers .item .orange-txt {
+    margin: 0;
+    font-size: 18px;
+    line-height: 26px;
+    color: #8d8f92;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#whosalers .item .orange-txt:hover, #whosalers .item .orange-txt:active, 
+#whosalers .item .orange-txt:focus {
+    color: #f19321;
+}
+
+#whosalers .item .small-txt {
+    font-size: 12px;
+    line-height: 22px;
+    color: #8c8e91;
+}
+
+#whosalers .item .small-txt strong {
+    font-size: 12px;
+    line-height: 14px;
+    color: #8c8e91;
+    display: block;
+}
+
+#whosalers .whosalers-navigation {
+    float:left;
+    width: 40px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#whosalers .whosalers-navigation a {
+    width: 31px;
+    height: 37px;
+    display: block;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+#whosalers .whosalers-navigation a.prev {
+    background-image: url(/images/frontend/autos/btn-ant.png);
+}
+
+#whosalers .whosalers-navigation a.next {
+    background-image: url(/images/frontend/autos/btn-sig.png);
+}
+
+.whosalers-navigation a:hover, .whosalers-navigation a:active, .whosalers-navigation a:focus {
+    background-position: 0 -37px;
+}
+
+/* STARRED ADVICE SINGLE */
+#starred-advices {
+    float: left;
+    width: 100%;
+    margin: 0 0 0px;
+}
+
+#starred-advices .belt {
+    width: 625px;
+    height: 165px;
+    display: block;
+    overflow: hidden;
+    float: left;
+}
+
+#starred-advices .belt ul {
+    margin: 0;
+    padding: 0;
+}
+#starred-advices .brand {
+    width: 156px;
+    height: 165px;
+    float: left;
+    list-style-type: none;
+}
+
+#starred-advices .item {
+    margin: 0 10px;
+    padding: 0 0 2px;
+    border-bottom: 1px solid #FFF;
+}
+
+#starred-advices .item:hover, #starred-advices .item:active, #starred-advices .item:focus {
+    border-color: #f19321;
+    color: red;
+}
+
+#starred-advices .item img {
+    display: block;
+    margin: 0 0 5px
+}
+
+#starred-advices .item .orange-txt {
+    margin: 0;
+    font-size: 16px;
+    line-height: 26px;
+    color: #8d8f92;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#starred-advices .item .orange-txt:hover, #starred-advices .item .orange-txt:active, 
+#starred-advices .item .orange-txt:focus {
+    color: #f19321;
+}
+
+#starred-advices .item .small-txt {
+    font-size: 12px;
+    line-height: 22px;
+    color: #8c8e91;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#starred-advices .item .small-txt strong {
+    font-size: 12px;
+    line-height: 14px;
+    color: #8c8e91;
+    display: block;
+}
+
+#starred-advices .starred-advices-navigation {
+    float:left;
+    width: 15px;
+    height: 100px;
+    cursor: pointer;
+}
+
+#starred-advices .starred-advices-navigation a {
+    width: 31px;
+    height: 37px;
+    display: block;
+    margin-top: 60px;
+
+}
+
+#starred-advices .starred-advices-navigation a.prev {
+    margin-left: -10px;
+    background-image: url(/images/frontend/autos/btn-ant.png);
+}
+
+#starred-advices .starred-advices-navigation a.next {
+    margin-left: 7px;
+    background-image: url(/images/frontend/autos/btn-sig.png);
+}
+
+.starred-advices-navigation a:hover, .starred-advices-navigation a:active, 
+.starred-advices-navigation a:focus {
+    background-position: 0 -37px;
+}
+
+/* =======================================================================
+---------- Caracteristicas para cada mercado OPSA  --------------
+==========================================================================*/
+
+/*Tamaño de carrusel personalizado para portal Empleos de EC*/
+.empleos  #starred_advices {
+    height: 240px;
+}
+
+.empleos #starred_advices .belt {
+    width: 900px;
+}
+
+.empleos  #starred_advices .control-panel, .empleos  #starred_advices .belt, 
+.empleos  #starred_advices .car_adv {
+    height: 180px;
+}
+
+.empleos #starred_advices .car_adv {
+    width: 180px;
+    height: 175px;
+}
+
+.empleos  #starred_advices .control-panel .prev, .empleos  #starred_advices .control-panel .next {
+    margin-top: 55px;
+}
+
+.empleos #starred_advices .car_adv h3.first_line {
+    width: 162px;
+    height: 50px;
+    color: #af1016;
+    font-size: 18px;
+}
+
+.empleos #starred_advices .car_adv h3.second_line {
+    width: 162px;
+    color: #646567;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.empleos #starred_advices .car_adv p.resume {
+    width: 162px;
+    height: 110px;
+}
+
+.empleos #starred_advices .view_more a, .empleos #starred_advices .view_more a:visited {
+    padding-left: 5px;
+}
+
+.empleos #starred_advices .view_more {
+    width: 160px;
+}
+
+
+
+/* INMUEBLES */
+.inmuebles .featured-list article .page-header {
+    border-bottom: 2px solid #358940;
+}
+
+.inmuebles .featured-list article .page-header .title {
+    color: #358940;
+}
+
+.inmuebles .orange-txt {
+    color: #358940;
+}
+
+.inmuebles  #whosalers .item:hover, .inmuebles #c-predios .item:active, 
+.inmuebles #c-predios .item:focus {
+    border-color: #358940;
+}
+
+.inmuebles #whosalers .item .orange-txt:hover, .inmuebles #whosalers .item .orange-txt:active, 
+.inmuebles #whosalers .item .orange-txt:focus {
+    color: #358940;
+}
+
+.inmuebles #starred-advices .item:hover, .inmuebles #starred-advices .item:active, 
+.inmuebles #starred-advices .item:focus {
+    border-color: #358940;
+}
+
+.inmuebles #starred-advices .item .orange-txt:hover, 
+.inmuebles #starred-advices .item .orange-txt:active, 
+.inmuebles #starred-advices .item .orange-txt:focus {
+    color: #358940;
+}
+
+.inmuebles #whosalers .whosalers-navigation a.prev {
+    background-image: url(/images/frontend/inmuebles/btn-ant.png);
+}
+
+.inmuebles #starred-advices .starred-advices-navigation a.prev {
+    background-image: url(/images/frontend/inmuebles/btn-ant.png);
+}
+
+.inmuebles #whosalers .whosalers-navigation a.next {
+    background-image: url(/images/frontend/inmuebles/btn-sig.png);
+}
+
+.inmuebles #starred-advices .starred-advices-navigation a.next {
+    background-image: url(/images/frontend/inmuebles/btn-sig.png);
+}
+
+.inmuebles .thumbs-container .gallery-item:hover,
+.inmuebles .thumbs-container .gallery-item:focus, 
+.inmuebles .thumbs-container .gallery-item.active {
+    border: 3px solid #358940;
+}
+
+
+
+/* VARIOS */
+.varios .featured-list article .page-header {
+    border-bottom: 2px solid #F47621;
+}
+
+.varios .featured-list article .page-header .title {
+    color: #F47621;
+}
+
+.varios .orange-txt {
+    color: #F47621;
+}
+
+.varios  #whosalers .item:hover, .varios #c-predios .item:active, 
+.varios #c-predios .item:focus {
+    border-color: #F47621;
+}
+
+.varios #whosalers .item .orange-txt:hover, .varios #whosalers .item .orange-txt:active, 
+.varios #whosalers .item .orange-txt:focus {
+    color: #F47621;
+}
+
+.varios #starred-advices .item:hover, .varios #starred-advices .item:active, 
+.varios #starred-advices .item:focus {
+    border-color: #F47621;
+}
+
+.varios #starred-advices .item .orange-txt:hover, 
+.varios #starred-advices .item .orange-txt:active, 
+.varios #starred-advices .item .orange-txt:focus {
+    color: #F47621;
+}
+
+.varios #whosalers .whosalers-navigation a.prev {
+    background-image: url(/images/frontend/varios/btn-ant.png);
+}
+
+.varios #starred-advices .starred-advices-navigation a.prev {
+    background-image: url(/images/frontend/varios/btn-ant.png);
+}
+
+.varios #whosalers .whosalers-navigation a.next {
+    background-image: url(/images/frontend/varios/btn-sig.png);
+}
+
+.varios #starred-advices .starred-advices-navigation a.next {
+    background-image: url(/images/frontend/varios/btn-sig.png);
+}
+
+.varios .thumbs-container .gallery-item:hover,
+.varios .thumbs-container .gallery-item:focus, 
+.varios .thumbs-container .gallery-item.active {
+border: 3px solid #F47621;
+}
+
+
+/* EMPLEOS */
+.empleos .featured-list article .page-header {
+    border-bottom: 2px solid #56A6DC;
+}
+
+.empleos .featured-list article .page-header .title {
+    color: #56A6DC;
+}
+
+.empleos .orange-txt {
+    color: #56A6DC;
+}
+
+.empleos  #whosalers .item:hover, .empleos #c-predios .item:active, 
+.empleos #c-predios .item:focus {
+    border-color: #56A6DC;
+}
+
+.empleos #whosalers .item .orange-txt:hover, .empleos #whosalers .item .orange-txt:active, 
+.empleos #whosalers .item .orange-txt:focus {
+    color: #56A6DC;
+}
+
+.empleos #starred-advices .item:hover, .empleos #starred-advices .item:active, 
+.empleos #starred-advices .item:focus {
+    border-color: #56A6DC;
+}
+
+.empleos #starred-advices .item .orange-txt:hover, 
+.empleosempleos #starred-advices .item .orange-txt:active, 
+.varios #starred-advices .item .orange-txt:focus {
+    color: #56A6DC;
+}
+
+.empleos #whosalers .whosalers-navigation a.prev {
+    background-image: url(/images/frontend/empleos/btn-ant.png);
+}
+
+.empleos #starred-advices .starred-advices-navigation a.prev {
+    background-image: url(/images/frontend/empleos/btn-ant.png);
+}
+
+.empleos #whosalers .whosalers-navigation a.next {
+    background-image: url(/images/frontend/empleos/btn-sig.png);
+}
+
+.empleos #starred-advices .starred-advices-navigation a.next {
+    background-image: url(/images/frontend/empleos/btn-sig.png);
+}
+
+
+
+#advice-details-frame .preview-container .image-preview {
+width: 100%;
+height: 430px;
+display: block!important;
+background: url('/images/frontend/image-loader.gif') center center no-repeat;
+}
+
+.photo #big-preview{
+    width: 100% !important;
+    float: none!important;
+}
+
+.photo #big-preview img{
+    width: 100% !important;
+}
+
+#advice-details-frame #big-preview.ignore {
+cursor: auto;
+}
+
+.gallery-preview .gallery-navigator {
+height: 100px;
+background-color: #DBDCE1;
+position: relative;
+margin-bottom: 10px;
+}
+
+#photo .gallery-navigator .gallery-navigator-button-left {
+background-position: left top;
+float: left; 
+margin-top: 35px;
+background: url(/../images/frontend/arrow1.png) center no-repeat;
+margin-left:2px;
+background-size: 25px 25px;
+}
+
+#photo .gallery-navigator .gallery-navigator-button { 
+display: block;
+width: 25px;
+height: 25px;
+cursor: pointer; 
+}
+
+#photo .gallery-navigator .gallery-navigator-button-right {
+background-position: right top;
+float: right; 
+margin-top: 35px;
+background: url(/../images/frontend/arrow2.png) center no-repeat;
+margin-right: 2px;
+background-size: 25px 25px;
+}
+ 
+ 
+
+.gallery-preview .thumbs-container {
+width: 5000px;
+margin-left: -28px;
+}
+
+.autos .thumbs-container .gallery-item:hover,.autos .thumbs-container .gallery-item:focus, .autos .thumbs-container .gallery-item.active {
+border: 3px solid #D10000;
+}
+
+.gallery-preview .thumbs-container li {
+float: left;
+margin-right: 20px; 
+border: 2px solid #DBDCE1;
+}
+
+.gallery-preview .thumbs-container a {
+display: block;
+}
+
+.thumbs-mask ul{
+    list-style: none;
+}
+
+#photo .thumbs-mask {
+position: absolute;
+width: 685px;
+left: 30px;
+height: auto;
+overflow: hidden;
+}
+
+#multimedia .multimedia {
+width: 100%;
+height: 100%;
+}
+
+.image-navigator{
+  height: 100px; 
+  position: absolute;
+  margin-top: 26%;
+  width: 96%;
+}
+
+.image-navigator .gallery-navigator-button {
+  display: block;
+  width: 50px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.image-navigator .gallery-navigator-button-right {
+  background-position: right top;
+  float: right;
+  margin-top: 35px;
+  background: url(/../images/frontend/arrow2.png) center no-repeat;
+  margin-right: 2px;
+  background-size: 38px 38px;
+}
+
+.image-navigator .gallery-navigator-button-left {
+  background-position: left top;
+  float: left;
+  margin-top: 35px;
+  background: url(/../images/frontend/arrow1.png) center no-repeat;
+  margin-left: 2px;
+  background-size:38px 38px;
+}

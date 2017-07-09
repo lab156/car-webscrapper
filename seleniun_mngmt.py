@@ -1,7 +1,7 @@
 from selenium import webdriver as wd
 from selenium import common
 import time
-import clean_data as clean
+from . import clean_data as clean
 
 
 def get_webID_set(browser, url, *args, **kwargs):
@@ -122,6 +122,8 @@ class CarMan(object):
         Retorna el precio como un int o None
         '''
         return clean.precio(self.dic['Precio'])
+    def moneda(self):
+        return clean.moneda(self.dic['Precio'])
     def maker(self):
         return clean.maker(self.dic['Marca'])
     def model(self):
