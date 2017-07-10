@@ -1,7 +1,7 @@
 from selenium import webdriver as wd
 from selenium import common
-import database_mngt as datm
-import seleniun_mngmt as selm
+from scrapper import database_mngt as datm
+from scrapper import seleniun_mngmt as selm
 import datetime as dt
 
 bro = wd.Chrome('/usr/bin/chromedriver')
@@ -34,6 +34,7 @@ def visitar(url, bro2, db):
         db.create_entry(url = url,
                 IdWeb = int(car.IdWeb()),
                 precio = car.precio(),
+                moneda = car.moneda(),
                 car_id = car_id,
                 ubicacion = car.ubicacion(),
                 condicion = car.condicion(),
