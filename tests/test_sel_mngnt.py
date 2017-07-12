@@ -6,6 +6,9 @@ from selenium import webdriver as wd
 from .. import seleniun_mngmt as sel
 import datetime
 
+####run with
+#### python -m unittest scrapper.tests.test_sel_mngnt -v
+
 class CarManTest(unittest.TestCase):
     @classmethod
     def setUpClass(self):

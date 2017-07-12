@@ -17,6 +17,9 @@ def precio_moneda(precio, moneda, quiero = 'HNL', tasa = 23.45):
         else:
             return precio;
 
+def converter(df,  quiero='HNL'):
+    return df.apply(lambda l: precio_moneda(l['precio'], l['moneda']), axis=1)
+
 class ModelQueryFit(object):
     def __init__(self, *args):
         '''
@@ -27,19 +30,20 @@ class ModelQueryFit(object):
         sql_str = ''' select C.precio, C.moneda, V.year, V.model, C.url from CarPriceInfo as C join VehicleModelYear as V on V.id = C.car_id where {} order by V.year asc;'''.format(sql_models)
         dat.open()
         self.df = pd.read_sql(sql_str, con=dat.cnx)
+        self.df_conv = self.df.copy()
+        self.df_conv['precio'] = converter(self.df)
         dat.close()
 
     def outliers(self, col='precio'):
-        return self.df[self.df[col]>0]
+        return self.df_conv[self.df[col]>0]
 
     def npa(self, col):
         '''
         return self as numpy array without outliers
+        and values converted to right currency
         '''
         return np.asarray(self.outliers()[col])
 
-    def converter(self, quiero='HNL'):
-        return self.df.apply(lambda l: precio_moneda(l['precio'], l['moneda']), axis=1)
 
     def m(self, x):
         '''
@@ -61,8 +65,8 @@ class ModelQueryFit(object):
         returns a tuple of advisable upper and lower bounds
         for graphing
         '''
-        low = pd.DataFrame.min(self.df['year'])
-        upp = pd.DataFrame.max(self.df['year'])
+        low = pd.DataFrame.min(self.df_conv['year'])
+        upp = pd.DataFrame.max(self.df_conv['year'])
         return (np.floor(low - (upp - low)*0.1 ), np.ceil(upp + (upp - low)*0.1 ))
 
 
@@ -73,6 +77,7 @@ class ModelQueryFit(object):
         if no filename is given returns a pandas dataframe
         '''
         df = self.outliers()
+        df['precio'] = self.outliers()
         if filename:
             return  df.to_json(orient='records', path_or_buf=filename)
         else:
