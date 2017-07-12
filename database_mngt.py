@@ -140,6 +140,18 @@ class CarDB(object):
         self.close()
         return df_res.to_dict(orient='records')
 
+    def update_carpriceinfo(self, column, value, where):
+        '''
+        updates the CarPriceInfo database where column is the 
+        value to be updated and where is the identifier
+        '''
+        sql_state = '''UPDATE CarPriceInfo SET {} = %s WHERE IdWeb = %s;'''.format(column)
+        self.open()
+        self.cursor.execute(sql_state, (value, where))
+        self.cnx.commit()
+        self.close()
+        return sql_state
+
 
 class SC(object):
     def __init__(self, url, **kwargs):

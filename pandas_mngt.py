@@ -77,7 +77,6 @@ class ModelQueryFit(object):
         if no filename is given returns a pandas dataframe
         '''
         df = self.outliers()
-        df['precio'] = self.outliers()
         if filename:
             return  df.to_json(orient='records', path_or_buf=filename)
         else:
