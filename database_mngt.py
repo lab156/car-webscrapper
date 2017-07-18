@@ -140,6 +140,15 @@ class CarDB(object):
         self.close()
         return df_res.to_dict(orient='records')
 
+    def pandas_query(self, query):
+        '''
+        Make a general query with pandas
+        '''
+        self.open()
+        df_res = pd.read_sql(query, con=self.cnx)
+        self.close()
+        return df_res
+
     def update_carpriceinfo(self, column, value, where):
         '''
         updates the CarPriceInfo database where column is the 
