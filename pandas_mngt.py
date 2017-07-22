@@ -87,7 +87,7 @@ class ModelQueryFit(object):
         json file to plot fitting curve
         if no filename is given returns a pandas dataframe
         '''
-        X = np.arange(*self.range(), 1.0)
+        X = np.arange(*(self.range() + [1.0]))
         Y = self.m(X)
         js = np.append(X[...,np.newaxis],Y[...,np.newaxis],axis=1) 
         js_df = pd.DataFrame(data=js[:,:], columns=['year', 'precio'])
@@ -100,7 +100,7 @@ if __name__ == '__main__':
     print(sys.argv)
     m = ModelQueryFit(*sys.argv[1:])
     npsol = m.log_linear_fit()
-    xreg = np.arange(*m.range(), 1.0)
+    xreg = np.arange(*(m.range() + [1.0]))
     yreg = m.m(xreg)
     x = m.npa('year')
     y = m.npa('precio')
