@@ -3,7 +3,7 @@ import numpy as np
 from . import database_mngt as db
 import scipy.optimize as opt
 import sys
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 def precio_moneda(precio, moneda, quiero = 'HNL', tasa = 23.45):
     if quiero == 'USD': 
